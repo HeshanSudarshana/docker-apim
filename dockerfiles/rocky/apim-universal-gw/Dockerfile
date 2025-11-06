@@ -23,7 +23,7 @@ FROM rockylinux:9.3
 RUN yum clean all && \
     yum makecache && \
     yum -y update && \
-    yum install -y glibc-langpack-en langpacks-en glibc-locale-source && \
+    yum install -y --nobest glibc-langpack-en langpacks-en glibc-locale-source && \
     localedef -c -f UTF-8 -i en_US en_US.UTF-8
 
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
