@@ -61,22 +61,22 @@ jobs:
             # Map component to repository, pack name, and server name
             case "$component" in
               "apim")
-                repo="wso2/wso2am"
+                repo="heshansudarshana/wso2am"
                 pack="wso2am-${ZIP_VERSION}.zip"
                 server_name="wso2am"
                 ;;
               "apim-acp")
-                repo="wso2/wso2am-acp"
+                repo="heshansudarshana/wso2am-acp"
                 pack="wso2am-acp-${ZIP_VERSION}.zip"
                 server_name="wso2am-acp"
                 ;;
               "apim-universal-gw")
-                repo="wso2/wso2am-universal-gw"
+                repo="heshansudarshana/wso2am-universal-gw"
                 pack="wso2am-universal-gw-${ZIP_VERSION}.zip"
                 server_name="wso2am-universal-gw"
                 ;;
               "apim-tm")
-                repo="wso2/wso2am-tm"
+                repo="heshansudarshana/wso2am-tm"
                 pack="wso2am-tm-${ZIP_VERSION}.zip"
                 server_name="wso2am-tm"
                 ;;
@@ -129,8 +129,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        repository: wso2/docker-apim
-        ref: master
+        repository: HeshanSudarshana/docker-apim
+        ref: master-workflow-heshan
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
